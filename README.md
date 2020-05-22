@@ -65,3 +65,6 @@ Starting your existing container (when it is stopped):
 ```
 docker start mongodb
 ```
+
+## Infraestructure project
+You can find here a wrapper of the `Unity Container`. This is specially useful if you want to prevent the other project requiring install the refered container.
