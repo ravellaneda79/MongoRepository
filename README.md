@@ -44,7 +44,7 @@ public class MongoRepositoryFake : GenericMongoRepository<AnyEntity>
 }
 ```
 
-**Note:** Consider using the environment variables to provide this settings. This is only a template ;)
+**Note:** Consider the use of the environment variables to provide these settings. This is only a template ;)
 
 ## Tests
 This code has been tested by **Integration Tests**, so will need a MongoDB running on you local. I suggest get the Docker image. Following, these are the commands to pull, run and start the image:
