@@ -2,7 +2,11 @@
 This is a repository with MongoDB. It implements the repository pattern.
 
 ## How to use it
-You wil find the generic repository `GenericMongoRepository`. This is a `IGenericMongoRepository`as well, so you are able to register in your IoC container your own implementation of the refered interface.
+You wil find the generic repository `GenericMongoRepository`. This is a `IGenericMongoRepository`as well, so you are able to register in your IoC container your own implementation of the refered interface. Your can find an example at the `MongoRepositoryTests`:
+```C#
+GenericContainer.Instance.Register<IGenericMongoRepository<AnyEntity>, MongoRepositoryFake>();
+```
+The `MongoRepositoryFake` is inheriting the `GenericMongoRepository`, but as the `GenericMongoRepository` is implementing the `IGenericMongoRepository`, it is ok to register as the interface implementation any inhereting from the `GenericMongoRepository`. You can replace the `MongoRepositoryFake` by your own implementation of the `IGenericMongoRepository<AnyEntity>`.
 
 In order to make your life easier, you can quickly implement any specific repository by inhereting from `GenericMongoRepository`. Example:
 ```C#
